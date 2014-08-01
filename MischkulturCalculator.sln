@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MischkulturCalculator", "MischkulturCalculator\MischkulturCalculator.fsproj", "{0DA9FAD4-FA94-4264-BB9A-EF9CBE404994}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MischkulturCalculator.Console", "MischkulturCalculator.Console\MischkulturCalculator.Console.fsproj", "{3AF92B5A-7A68-4C62-92A1-7D9385AAC5FA}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MischkulturCalculator.Tests", "MischkulturCalculator.Tests\MischkulturCalculator.Tests.fsproj", "{975DDF26-26D2-43E6-A2D3-D3A799B679FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DA9FAD4-FA94-4264-BB9A-EF9CBE404994}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DA9FAD4-FA94-4264-BB9A-EF9CBE404994}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DA9FAD4-FA94-4264-BB9A-EF9CBE404994}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DA9FAD4-FA94-4264-BB9A-EF9CBE404994}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AF92B5A-7A68-4C62-92A1-7D9385AAC5FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AF92B5A-7A68-4C62-92A1-7D9385AAC5FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AF92B5A-7A68-4C62-92A1-7D9385AAC5FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AF92B5A-7A68-4C62-92A1-7D9385AAC5FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{975DDF26-26D2-43E6-A2D3-D3A799B679FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{975DDF26-26D2-43E6-A2D3-D3A799B679FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{975DDF26-26D2-43E6-A2D3-D3A799B679FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{975DDF26-26D2-43E6-A2D3-D3A799B679FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
