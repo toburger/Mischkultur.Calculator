@@ -27,5 +27,38 @@ let pflanzenfamiliendaten =
     |> toTheoryData
 
 [<Theory; PropertyData("pflanzenfamiliendaten")>]
-let ``Pflanzenfamilienverträglichkeit`` ((pf1: Pflanzenfamilie, pf2: Pflanzenfamilie), expected) =
+let ``Pflanzenfamilienverträglichkeit`` ((pf1, pf2), expected) =
     pflanzenfamilieKompatibilität pf1 pf2 |> should equal expected
+
+let nährstroffverträglichkeit =
+    [ (Nährstoffverbrauch.Mittel, Nährstoffverbrauch.Mittel), false
+      (Nährstoffverbrauch.Schwach, Nährstoffverbrauch.Schwach), false
+      (Nährstoffverbrauch.Stark, Nährstoffverbrauch.Stark), false
+      (Nährstoffverbrauch.Mittel, Nährstoffverbrauch.Schwach), true
+      (Nährstoffverbrauch.Schwach, Nährstoffverbrauch.Stark), true
+      (Nährstoffverbrauch.Stark, Nährstoffverbrauch.Mittel), true ]
+    |> toTheoryData
+
+[<Theory; PropertyData("nährstroffverträglichkeit")>]
+let ``Nährstroffverträglichkeit`` ((ns1, ns2), expected) =
+    nährstoffverbrauchKompatibilität ns1 ns2 |> should equal expected
+
+let verträglichePflanzen =
+    [ (Pflanzen.tomate, Pflanzen.artischoke), false
+      (Pflanzen.basilikum, Pflanzen.gurke), true
+      (Pflanzen.tomate, Pflanzen.zwiebel), false ]
+    |> toTheoryData
+
+[<Theory; PropertyData("verträglichePflanzen")>]
+let ``Verträgliche Pflanzen`` ((p1, p2), expected) =
+    istBesondersVerträglich p1 p2 |> should equal expected
+    
+let unverträglichePflanzen =
+    [ (Pflanzen.tomate, Pflanzen.artischoke), false
+      (Pflanzen.basilikum, Pflanzen.gurke), false
+      (Pflanzen.tomate, Pflanzen.zwiebel), true ]
+    |> toTheoryData
+
+[<Theory; PropertyData("unverträglichePflanzen")>]
+let ``Unverträgliche Pflanzen`` ((p1, p2), expected) =
+    istBesondersUnverträglich p1 p2 |> should equal expected
