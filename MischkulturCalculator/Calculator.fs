@@ -2,12 +2,6 @@
 
 open Pflanzen
 
-let unverträglichePflanzen =
-    set [ set [ tomate; zwiebel ] ]
-
-let verträglichePflanzen =
-    set [ set [ basilikum; gurke ] ]
-
 let checkVertäglichkeit ls p1 p2 =
     ls |> Set.exists (Set.isSuperset (set [ p1; p2 ]))
 
